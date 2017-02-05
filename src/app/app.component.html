@@ -1,0 +1,32 @@
+<section class="todoapp">
+  <header class="header">
+    <!--h1>Njeewten App</h1-->
+  </header>
+
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Janngomaa <i><small>Dowri</small></i></a>
+    </div>
+
+    <div class="btn-group navbar-header menu" role="group">
+        <button type="button" class="btn btn-default" routerLink="">Daral</button>
+        <button type="button" class="btn btn-default" routerLink="">Ngaynaaka</button>
+        <button type="button" class="btn btn-default" routerLink="">Cippal</button>
+        <button type="button" class="btn btn-default" routerLink="">Majje</button>
+        <button type="button" class="btn btn-default" routerLink="">Kabaruuji</button>
+        <button type="button" class="btn btn-default" routerLink="tchat">Jeewte</button>
+    </div>
+    
+    <div *ngIf="isLoggedIn" class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a (click)="logout()"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Seŋto</a></li>
+      </ul>
+    </div>
+  </div>
+  </nav>
+
+  <div class="app-content">
+    <router-outlet></router-outlet>
+  </div>
